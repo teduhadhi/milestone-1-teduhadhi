@@ -1,7 +1,22 @@
+:root{
+  --bg-color :white;
+  --text-color : black;
+  --shadow-color : black;
+  --invert: 0%;
+}
+
 *{
     margin: 0;
     font-family: "Playfair Display", serif;
 }
+
+.night-mode{
+  --bg-color :black;
+  --text-color : white;
+  --shadow-color : white;
+  --invert: 100%;
+}
+
 
 .nav-bar{
   display: flex;
@@ -34,7 +49,7 @@
   margin-right: 30px;
 }
 
-.hamb-butt,.dark-mode{
+.hamb-butt,.dark-button{
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -42,6 +57,11 @@
   margin: 0;
   font-size: 2.5rem;
   font-weight: 600;
+}
+
+.dark-button{
+  color: var(--bg-color);
+  text-shadow: 2px 2px var(--shadow-color);
 }
 
 
@@ -70,7 +90,7 @@ h1{
 .aboutsect{
     height: 600px;
     width: 100%;
-    background-color: white;
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     color: black;
@@ -81,6 +101,7 @@ h1{
 
 .aboutsect *{
     margin: 0 5%;
+    color: var(--text-color);
 }
 
 .bekerja{
@@ -151,7 +172,7 @@ h1{
 }
 
 .testimonsect{
-    background-color: white;
+    background-color: var(--bg-color);
     height: fit-content;
     width: 100%;
     display: flex;
@@ -167,7 +188,7 @@ h1{
     gap: 30px;
     font-size: 1.5rem;
     line-height: 1.75em;
-    color: white;
+    color: var(--bg-color);
     transition: color 2s ease-out;
     margin: 0 5%;
 }
@@ -194,7 +215,7 @@ h1{
 }
 
 .testimonsect:hover div{
-    color: black;
+    color: var(--text-color);
 }
 
 
@@ -216,9 +237,15 @@ h1{
     z-index: 1;
 }
 
+.addressinfo *{
+  color: var(--text-color);
+}
+
+
 
 .maps{
     transition: scale 0.5s ease;
+    filter: invert(var(--invert));
 }
 
 .maps:hover{
@@ -226,13 +253,18 @@ h1{
 }
 
 footer{
+    background-color: var(--bg-color);
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3,1fr);
     gap: 10px;
-    border-top: 1px solid black;
+    border-top: 1px solid var(--text-color);
     padding: 30px 5% 0;
 
+}
+
+footer * {
+  color: var(--text-color);
 }
 
 footer > .creative{
@@ -255,7 +287,6 @@ footer > ul{
 
 a{
     text-decoration: none;
-    color: black;
 }
 
 .copyright, .copyright-2{

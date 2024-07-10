@@ -1,20 +1,49 @@
 *{
     margin: 0;
+    font-family: "Playfair Display", serif;
+}
+
+.nav-bar{
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 3;
+}
+
+.nav-bar  * {
+  color: white;
+  text-shadow: 2px 2px  black;
+
+}
+
+.buttons{
+  display: flex;
+  gap:30px
 }
 
 .logo{
-    position: fixed;
-    color: white;
-    font-size: 2rem;
-    inset: 20px 0 0 30px;
-    text-shadow: 2px 2px  black;
-    height: fit-content;
-    align-items: center;
-    z-index: 3;
-    /* backdrop-filter: blur(5px);
-    width: 100%;
-    height: 40px; */
+  font-size: 2rem;
+  margin-left: 30px;
 }
+
+.hamburger{
+  margin-right: 30px;
+}
+
+.hamb-butt,.dark-mode{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
 
 
 .mainsect{
@@ -24,29 +53,41 @@
     justify-content: left;
     align-items: center;
     background-color: black;
+    background-image: url(../src/img/compressed/bg-first.jpg);
+    background-size: cover;
+    background-position: 100%;
 }
 
 h1{
     color: white;
+    text-shadow: 2px 2px  black;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 5rem;
     padding-left: 5%;
     width: 50%;
 }
 
 .aboutsect{
-    height: 40vh;
+    height: 600px;
     width: 100%;
-    background-color: gray;
+    background-color: white;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: black;
     justify-content: center;
-    gap: 5;
+    gap: 10px;
 }
+
 
 .aboutsect *{
     margin: 0 5%;
+}
+
+.bekerja{
+    font-weight: 700;
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0;
 }
 
 .aboutsect > h2{
@@ -57,13 +98,14 @@ h1{
 
 .aboutsect > p{
     font-size: 1.5rem;
+    max-width: 900px;
 }
 
 .facssect{
-    height: 60vh;
-    width: 100%;
+    height: 690px;
     background-color: black;
     color: white;
+    text-shadow: 2px 2px  black;
 }
 
 .facs{
@@ -72,23 +114,96 @@ h1{
 
 .facitems{
     list-style: none;
-    border-bottom: 1px solid white;
-    height: 20vh;
+    height: 230px;
     display: flex;
     align-items: center;
     justify-content: end;
+    font-size: 4em;
+    cursor: pointer;
     padding-right: 5%;
-    font-size: 2em;
+    background-size: cover;
+    background-position-y: 50%;
+    transition: opacity 0.3s ease;
+    background-repeat: no-repeat;
+
 }
 
+.fac-1{
+    background-image: url(../src/img/compressed/joint.jpg);
+}
+
+.fac-2{
+    background-image: url(../src/img/compressed/welding.jpg);
+}
+
+.fac-3{
+    background-image: url(../src/img/compressed/anet-a8.jpg);
+}
+
+.facs:hover .facitems{
+    opacity: 0.5;
+    background-position-x: 2000vh;
+}
+
+.facs:hover .facitems:hover{
+    opacity: 1;
+    background-position-x: 0;
+}
+
+.testimonsect{
+    background-color: white;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    /* cursor: pointer; */
+}
+
+.testimonsect > div{
+  
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 1.5rem;
+    line-height: 1.75em;
+    color: white;
+    transition: color 2s ease-out;
+    margin: 0 5%;
+}
+
+.testimony-name{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.testimonsect > img{
+    /* height: 500px; */
+    width: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    position: relative;
+    transform: translateX(100%);
+    transition: transform 2s ease;
+    animation-fill-mode: forwards;
+}
+
+
+.testimonsect:hover .good-sir{
+    transform: translateX(0);
+}
+
+.testimonsect:hover div{
+    color: black;
+}
+
+
 .infosect{
-    height:60vh;
+    height:70vh;
     overflow: hidden;
     display: flex;
     align-items: center;
 }
-
-
 
 .addressinfo{
     right: 5%;
@@ -102,14 +217,21 @@ h1{
 }
 
 
-footer{
+.maps{
+    transition: scale 0.5s ease;
+}
 
+.maps:hover{
+    scale: 107%;
+}
+
+footer{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3,1fr);
     gap: 10px;
     border-top: 1px solid black;
-    padding: 30px 5%;
+    padding: 30px 5% 0;
 
 }
 
@@ -131,8 +253,13 @@ footer > ul{
     padding-left: 0;
 }
 
-.copyright > a,.copyright > a:visited{
+a{
     text-decoration: none;
     color: black;
 }
 
+.copyright, .copyright-2{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}

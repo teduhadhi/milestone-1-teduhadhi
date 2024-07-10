@@ -3,54 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./styles/style2.css">
     <title>register</title>
 </head>
 <body>
 	<header>
-		<nav>
-			<ul>
-				<!-- menu -->
-				<li>hamburger</li>
-				<!-- login and register -->
-				<li>register</li>
-			</ul>
-		</nav>
-
-		<nav>
+		<div class="big-reg-cont">
+		<nav class="user-data">
+			<div class="user-container container-signin">
 				<form action="" class="signin">
 					<label for="">username</label>
 					<input type="text" class="signin username"/>
 
-					<label for="">email</label>
-					<input type="email" name="" id="" class="signin email"/>
+					<label for="">Password</label>
+					<input type="password" name="" id="" class="signin email"/>
 
 					<input type="button" class="reg submit" value="Log in"/>
 				</form>
 
-				<a href="">Forgot password?</a>
+				<a class="forgot-password" href="">Forgot password?</a>
+
+			</div>
+		
+			<div class="user-container container-register">
+				<form action="" class="register">
+					<label for="">First Name</label>
+					<input type="text" class="reg first-name">
+			
+					<label for="">Last Name</label>
+					<input type="text" class="reg last-name">
+		
+					<label for="">username</label>
+					<input type="text" class="reg username">
+			
+					<label for="">email</label>
+					<input type="email" name="" id="" class="reg email"/>
+			
+					<label for="">Password</label>
+					<input type="password" name="" id="" class="reg password">
+			
+					<input type="button" class="reg submit" value="Register">
+				</form>	
+			</div>
 		</nav>
+		</div>
+		<div class="bg-reg bg-1"></div>
+		<!-- <div class="bg-reg bg-2">New Here?</div> -->
 	</header>
-
-    <main>
-        <form action="" class="register">
-          	<label for="">First Name</label>
-            <input type="text" class="reg first-name">
-    
-            <label for="">Last Name</label>
-            <input type="text" class="reg last-name">
-
-            <label for="">username</label>
-            <input type="text" class="reg username">
-    
-            <label for="">email</label>
-            <input type="email" name="" id="" class="reg email"/>
-    
-            <label for="">Password</label>
-            <input type="password" name="" id="" class="reg password">
-    
-            <input type="button" class="reg submit" value="Register">    
-        </form>
-    </main>
- 
-</body>
 </html>

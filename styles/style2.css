@@ -1,0 +1,134 @@
+
+.popup-user{
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.741);
+  border: none;
+  backdrop-filter: blur(1.75px);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 7;
+  translate: 100% 0;
+    transition: translate 1.5s, display 1.5s ease-out allow-discrete;
+}
+
+.popup-user:popover-open{
+  translate: 0 0;
+    
+  @starting-style{
+      translate: 100% 0;
+  }
+}
+.hamb-butt-2{
+  z-index: 7;
+  margin: 0;
+  color: white;
+  position: fixed;
+  top: 19px;
+  left: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.big-reg-cont{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+
+
+.user-data{
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  z-index: 3;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.user-container{
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  align-items: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-size: 1.5em;
+  width: 100%;
+  color: white;
+  
+}
+
+input{
+  height: 1rem;
+  border-radius: 25px;
+  border: none;
+  background-color: rgba(216, 215, 215, 0.701);
+  margin-top: 1%;
+  margin-bottom: 3%;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: rgb(0, 0, 0);
+  font-family: serif;
+}
+
+input[type="button"]{
+  background-color: black;
+  color: white;
+  height: 2em;
+  margin-top: 15px;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 30px;
+  font-size: 0.95em;
+}
+
+.forgot-password{
+  font-size: 1.25em;
+  margin-top: 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+/* .bg-reg{
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.21);
+  
+  position: fixed;
+  z-index: 5;
+} */
+
+.bg-1{
+  top: 0;
+  left: 0;
+  background-color: ;
+}
+
+.bg-2{
+  top: 0;
+  right: 0;
+}
+
+/* .container-register:hover .bg-1{
+  display: none;
+} */
+
+
+

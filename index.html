@@ -4,6 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
 	<link rel="icon" type="image" href="./src/icons/ruler-svgrepo-com.svg"/>
 
 	<link rel="stylesheet" href="./styles/style1.css"/>
@@ -13,32 +17,58 @@
 </head>
 <body>
 	<header>
-		<nav class="logo">bekerja</nav>
-		<nav>
-			<ul>
-				<!-- menu -->
-				<!-- <li>hamburger</li> -->
-				<!-- login and register -->
-				<!-- <li>register</li> -->
-			</ul>
-		</nav>
-
-		<nav>
-			<!-- <form action="" class="signin">
-				<label for="">username</label>
-				<input type="text" class="signin username"/>
-
-				<label for="">email</label>
-				<input type="email" name="" id="" class="signin email"/>
-
-				<input type="button" class="reg submit" value="Log in"/>
-			</form>
-
-			<a href="">Forgot password?</a>
-
-			<p>Don't have an account?</p>
-			<a href="./register.html">Create an account</a>
-		</nav> -->
+		<div class="nav-bar">
+			<nav class="logo">bekerja</nav>
+			<div class="buttons">
+				<button class="dark-mode">&#9788;</button>
+				<nav class="hamburger"><button popovertarget="popup-user" class="hamb-butt">&#x2261;</button></nav>
+			</div>
+			
+		</div>
+		<div class="popup-user" popover id="popup-user">
+			<button popovertarget="popup-user" popoevertargetaction="hide" class="hamb-butt-2">&#9587;</button>
+			<div id="big-reg-cont" class="big-reg-cont">
+			<div class="user-data">
+				<div class="user-container container-signin">
+					<form action="" class="signin">
+						<label for="">username</label>
+						<input type="text" class="signin username"/>
+	
+						<label for="">Password</label>
+						<input type="password" name="" id="" class="signin email"/>
+	
+						<input type="button" class="reg submit" value="Log in"/>
+					</form>
+	
+					<a class="forgot-password" href="">Forgot password?</a>
+	
+				</div>
+			
+				<div class="user-container container-register">
+					<form action="" class="register">
+						<label for="">First Name</label>
+						<input type="text" class="reg first-name">
+				
+						<label for="">Last Name</label>
+						<input type="text" class="reg last-name">
+			
+						<label for="">username</label>
+						<input type="text" class="reg username">
+				
+						<label for="">email</label>
+						<input type="email" name="" id="" class="reg email"/>
+				
+						<label for="">Password</label>
+						<input type="password" name="" id="" class="reg password">
+				
+						<input type="button" class="reg submit" value="Register">
+					</form>	
+				</div>
+			</div>
+			</div>
+			<div class="bg-reg bg-1"></div>
+		</div>
+			<!-- <div class="bg-reg bg-2">New Here?</div> -->
 	</header>
 
 	<main>
@@ -50,7 +80,7 @@
 		<!-- name of the company, vision, etc -->
 		<section id="sect aboutsect" class="sect aboutsect">
 			<h2 class="about-title">bekerja</h2>
-			<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque laboriosam explicabo et at praesentium sapiente ad temporibus, laudantium aliquam vero minima, dolore necessitatibus non vitae rerum autem culpa voluptatem earum.</p>
+			<p>A creative sanctuary nestled in the heart of an urban landscape, where innovation thrives and ideas take flight. As you step into <span class="bekerja">bekerja</span>, you're enveloped by an atmosphere buzzing with energy and infused with inspiration.</p>
 		</section>
 
 		<!-- them facilites -->
@@ -62,10 +92,20 @@
 			</ul>
 		</section>
 
+		<section id="sect testimonsect" class="sect testimonsect">
+			<img src="./src/img/compressed/good-sir.jpg" class="good-sir" alt="testimony">
+			<div class="container-testimon">
+				<p class="testimony-about">
+					What makes <span class="bekerja">bekerja</span> exceptional is its supportive community of like-minded individuals who inspire and assist each other daily. Bekerja isn't just a workspace; it's a place where creativity thrives, connections deepen, and passions are reignited.</p>
+				<p class="testimony-name">Bruce Wayne</p>
+			</div>
+			
+		</section>
+
 		<section class="sect infosect">
 			<div class="addressinfo">
-				<h2 class="here">We Are Here</h2>
-				<p class="mailinfo">info@maribekerja.co.id</p>
+				<h2 class="here"><a href="https://maps.app.goo.gl/QqDTWWnGY4p8EQmk7" class="maps" target="_blank">We Are Here</a></h2>
+				<p class="mailinfo">info@mulaibekerja.co.id</p>
 				<p class="phoneinfo">+62 31 9999999</p>
 
 			</div>
@@ -87,12 +127,15 @@
 			
 			<h3 class="social">Social</h3>
 			<ul>
-				<li>Linkedin</li>
-				<li>Instagram</li>
+				<li><a href="https://www.linkedin.com/in/teduh-adhi-prakoso/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+				<li><a href="https://www.instagram.com/teduhadhi/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
 			</ul>
 
 			<div class="copyright">
 				<a href="#">&#169 bekerja</a>
+			</div>
+
+			<div class="copyright-2">
 				<a href="#">Privacy policy</a>
 				<a href="#">Terms of use</a>
 			</div>

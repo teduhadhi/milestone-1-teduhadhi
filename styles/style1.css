@@ -10,6 +10,8 @@
     font-family: "Playfair Display", serif;
 }
 
+
+
 .night-mode{
   --bg-color :black;
   --text-color : white;
@@ -32,7 +34,11 @@
 .nav-bar  * {
   color: white;
   text-shadow: 2px 2px  black;
+  transition: filter 0.5s ease;
+}
 
+.nav-bar .head-nav:hover{
+  filter:invert(100%)
 }
 
 .buttons{
@@ -55,14 +61,18 @@
   cursor: pointer;
   padding: 0;
   margin: 0;
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: 400;
 }
 
 .dark-button{
   color: var(--bg-color);
   text-shadow: 2px 2px var(--shadow-color);
 }
+
+/* .hamb-butt{
+  font-size: 1em;
+} */
 
 
 
@@ -93,7 +103,6 @@ h1{
     background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
-    color: black;
     justify-content: center;
     gap: 10px;
 }
@@ -123,7 +132,8 @@ h1{
 }
 
 .facssect{
-    height: 690px;
+    /* height: 690px; */
+    height: 100vh;
     background-color: black;
     color: white;
     text-shadow: 2px 2px  black;
@@ -135,7 +145,8 @@ h1{
 
 .facitems{
     list-style: none;
-    height: 230px;
+    /* height: 230px; */
+    height: 33.33vh;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -220,10 +231,14 @@ h1{
 
 
 .infosect{
-    height:70vh;
+    height:700px;
     overflow: hidden;
     display: flex;
     align-items: center;
+}
+
+.infosect:hover .maps{
+  scale: 107%;
 }
 
 .addressinfo{
@@ -241,16 +256,15 @@ h1{
   color: var(--text-color);
 }
 
-
+/* .here:hover{
+  border-bottom: 3px solid var(--text-color);
+} */
 
 .maps{
     transition: scale 0.5s ease;
     filter: invert(var(--invert));
 }
 
-.maps:hover{
-    scale: 107%;
-}
 
 footer{
     background-color: var(--bg-color);
@@ -260,6 +274,7 @@ footer{
     gap: 10px;
     border-top: 1px solid var(--text-color);
     padding: 30px 5% 0;
+    font-size: 1.25em;
 
 }
 
@@ -267,18 +282,9 @@ footer * {
   color: var(--text-color);
 }
 
-footer > .creative{
-
+footer li{
+  margin-bottom: 0.5em;
 }
-
-footer > .social{
-
-}
-
-footer > .copyright{
-
-}
-
 
 footer > ul{
     list-style: none;
@@ -287,6 +293,10 @@ footer > ul{
 
 a{
     text-decoration: none;
+}
+
+footer a:hover{
+  border-bottom: 1px solid var(--text-color);
 }
 
 .copyright, .copyright-2{

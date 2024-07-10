@@ -10,7 +10,7 @@
   position: fixed;
   z-index: 7;
   translate: 100% 0;
-    transition: translate 1.5s, display 1.5s ease-out allow-discrete;
+    transition: translate 1.3s, display 1.3s ease-out allow-discrete;
 }
 
 .popup-user:popover-open{

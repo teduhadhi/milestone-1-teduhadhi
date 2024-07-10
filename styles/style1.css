@@ -347,6 +347,7 @@ footer a:hover{
   flex-direction: column-reverse;
   height: 600px;
   gap: 40px;
+  justify-content: space-between;
 
 }
 
@@ -362,7 +363,8 @@ footer a:hover{
 .testimonsect > div{
   font-size: 1.05rem;
   line-height: 1.55em;
-  margin-top: 0px;
+  padding-top: 10%;
+ 
 }
 
 .testimony-name{

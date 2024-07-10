@@ -174,7 +174,7 @@ h1{
 
 .facs:hover .facitems{
     opacity: 0.5;
-    background-position-x: 2000vh;
+    background-position-x: 2000vw;
 }
 
 .facs:hover .facitems:hover{
@@ -246,7 +246,6 @@ h1{
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 10px;
     align-items: end;
     font-size: 3rem;
     z-index: 1;
@@ -303,4 +302,85 @@ footer a:hover{
     display: flex;
     align-items: center;
     column-gap: 10px;
+}
+
+
+@media(max-width:1024px){
+  .testimonsect > div{
+  
+    font-size: 1.25rem;
+    line-height: 1.55em;
+}
+
+.testimony-name{
+    font-size: 1.5em;
+    font-weight: 500;
+}
+}
+
+@media(max-width:768px){
+  h1{
+    font-size: 3rem;
+  }
+
+  .aboutsect{
+    height: 400px;
+  }
+
+  .aboutsect > h2{
+    font-size: 3.25rem;
+  }
+  .aboutsect > p{
+    font-size: 1.15rem;
+  }
+
+  .facssect{
+    height: 45vh ;
+  }
+
+  .facitems{
+    font-size: 2em;
+    height: 15vh;
+  }
+
+  .testimonsect{
+  flex-direction: column-reverse;
+  height: 600px;
+  gap: 40px;
+
+}
+
+.testimonsect > img{
+  /* height: 500px; */
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 0px 13%;
+  transform: translateY(-100%);
+}
+
+.testimonsect > div{
+  font-size: 1.05rem;
+  line-height: 1.55em;
+  margin-top: 0px;
+}
+
+.testimony-name{
+  font-size: 1.75em;
+  font-weight: 500;
+}
+
+.infosect{
+  height:320px;
+}
+.addressinfo{
+  font-size: 1.45rem;
+}
+
+footer{
+  font-size: 0.85em;
+}
+.nav-bar  * {
+  font-size: 1.35em;
+}
 }
